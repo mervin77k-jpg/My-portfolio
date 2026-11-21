@@ -177,24 +177,6 @@ dialog img { width: 100%; }
   .portrait { max-width: 245px; }
 }
 
-.work-image-note {
-  color: var(--muted);
-  text-align: center;
-}
-.work[data-category] {
-  --card-padding: clamp(16px, 2vw, 27px);
-  padding: var(--card-padding);
-}
-.work-cover {
-  width: calc(100% + 2 * var(--card-padding));
-  max-width: none;
-  margin: calc(-1 * var(--card-padding)) calc(-1 * var(--card-padding)) 16px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 9px 9px 0 0;
-  border-bottom: 1px solid var(--line);
-  background: var(--bg);
-}
 
 :root {
   --glow: #55c9ff;
