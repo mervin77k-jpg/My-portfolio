@@ -73,3 +73,17 @@ themeToggle.addEventListener('click', () => {
     // The toggle still works when persistent browser storage is unavailable.
   }
 });
+
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const entranceObserver = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('motion-entered');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.center-heading, .skill, .work[data-category], .lab-panel').forEach((element) => {
+    entranceObserver.observe(element);
+  });
+}
