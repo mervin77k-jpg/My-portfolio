@@ -1,5 +1,5 @@
 const filters = document.querySelector('.filters');
-const cards = document.querySelectorAll('.work');
+const cards = document.querySelectorAll('#work .work[data-category]');
 filters.hidden = false;
 
 filters.addEventListener('click', (event) => {
